@@ -1,6 +1,7 @@
-# posh-svn
+posh-svn
+========
 
-** This readme is under heavy work, just started to modify it, much based on the posh-git readme.
+**NOTE: This readme is under heavy work, just started to modify it, much based on the posh-git readme.**
 
 Table of contents:
 
