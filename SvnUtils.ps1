@@ -50,6 +50,7 @@ function Get-SvnInfo {
 }
 
 function Get-SvnStatus($svnDir = (Get-SvnDirectory)) {
+
     $settings = $Global:SvnPromptSettings
     $enabled = (-not $settings) -or $settings.EnablePromptStatus
     if ($enabled -and $svnDir) {
@@ -139,6 +140,8 @@ function Get-SvnStatus($svnDir = (Get-SvnDirectory)) {
             $repoName = Split-Path -Leaf (Split-Path $svnDir)
             $prefix = if ($settings.EnableWindowTitle -is [string]) { $settings.EnableWindowTitle } else { '' }
             $title = "${prefix}${repoName} [$($branch)]"
+            #set the window title
+            $host.ui.RawUI.WindowTitle = $title
         }
 
         return New-Object PSObject -Property @{

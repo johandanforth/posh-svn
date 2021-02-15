@@ -60,7 +60,7 @@ $global:SvnPromptSettings = [PSCustomObject]@{
     EnableExternalFileStatus                = $false  # include files from externals in counts
     ShowExternals                           = $true
 
-    EnableWindowTitle                       = 'svn ~ '
+    EnableWindowTitle                       = 'svn '
 }
 
 $WindowTitleSupported = $true
@@ -186,6 +186,10 @@ if (!(Test-Path Variable:Global:VcsPromptStatuses)) {
 $PoshSvnVcsPrompt = {
     $Global:SvnStatus = Get-SvnStatus
     Write-SvnStatus $SvnStatus
+}
+
+function Write-VcsStatus() {
+    Invoke-Command -ScriptBlock $PoshSvnVcsPrompt
 }
 
 $Global:VcsPromptStatuses += $PoshSvnVcsPrompt

@@ -4,19 +4,19 @@
 ModuleToProcess = 'posh-svn.psm1'
 
 # Version number of this module.
-ModuleVersion = '0.7.0'
+ModuleVersion = '0.0.1'
 
 # ID used to uniquely identify this module
-GUID = 'f18820b6-2e02-41b4-afc5-de886bb1b848'
+GUID = 'a12320b6-2e02-41b4-afc5-de886bb1b848'
 
 # Author of this module
-Author = 'Matt Bishop, Jeremy Skinner and contributors'
+Author = 'Original work by Matt Bishop, Jeremy Skinner and contributors. Additional small stuff by Johan Danforth.'
 
 # Description of the functionality provided by this module
 Description = 'Provides prompt with Subversion status summary information and tab completion for Subversion commands, parameters, remotes and branch names.'
 
 # Minimum version of the Windows PowerShell engine required by this module
-PowerShellVersion = '2.0'
+PowerShellVersion = '5.0'
 
 # Functions to export from this module
 FunctionsToExport = '*'
@@ -39,13 +39,13 @@ PrivateData = @{
         Tags = @('svn', 'prompt', 'tab', 'tab-completion', 'tab-expansion', 'tabexpansion')
 
         # A URL to the license for this module.
-       # LicenseUri = 'https://github.com/imobile3/posh-svn/blob/v0.7.1/LICENSE.txt'
+        LicenseUri = 'https://github.com/johandanforth/posh-svn/blob/master/LICENSE'
 
         # A URL to the main website for this project.
-        ProjectUri = 'https://github.com/imobile3/posh-svn'
+        ProjectUri = 'https://github.com/johandanforth/posh-svn'
 
         # ReleaseNotes of this module
-        #ReleaseNotes = 'https://github.com/imobile3/posh-svn/blob/v0.7.1/CHANGELOG.md'
+        #ReleaseNotes = 'https://github.com/johandanforth/posh-svn/CHANGELOG.md'
     }
 
 }
