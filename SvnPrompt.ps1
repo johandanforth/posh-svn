@@ -192,6 +192,19 @@ function Write-VcsStatus() {
     Invoke-Command -ScriptBlock $PoshSvnVcsPrompt
 }
 
+function Set-SvnPrompt() {
+    
+        $realLASTEXITCODE = $LASTEXITCODE
+    
+        Write-Host($pwd) -nonewline
+        Write-VcsStatus
+    
+        $global:LASTEXITCODE = $realLASTEXITCODE
+        return "> "
+}
+
+Set-Alias -Name Set-SvnPrompt -Value prompt
+
 $Global:VcsPromptStatuses += $PoshSvnVcsPrompt
 $ExecutionContext.SessionState.Module.OnRemove = {
     $c = $Global:VcsPromptStatuses.Count

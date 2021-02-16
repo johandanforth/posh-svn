@@ -58,6 +58,7 @@ else {
 }
 
 Export-ModuleMember -Function @(
+    'Set-SvnPrompt',
     'Write-VcsStatus',
     'Write-SvnStatus',
     'Get-SvnStatus',
